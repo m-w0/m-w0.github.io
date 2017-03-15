@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Created by Michael Woo -->
+    <meta charset="utf-8">
+    <title>Michael Woo - Home</title>
+    <link rel="stylesheet" type="text/css" href="_CSS/homepage.css">
+    <link rel="icon" type="image/x-icon" href="_images/Home.ico">
+    <script type="text/javascript" src="_JS/homepage.js">
+	<input type="text" id="login" required>
+	<input type="text" id="password" required>
+	<input type="button" id="goButton" onclick="checkLoginPass()" value="Log In"/>
+	</script>
+</head>
+<body>
+<audio autoplay id="elevator-music" src="_audio/elevatormusic.wav" preload="auto" loop></audio>
+    <div id="errorMessage" class="title">
+    	<!-- Makes the "Welcome!" text scroll to the left. scrollammount defines the speed, width and height defines the limits of the marquee, and behavior defines its type of marquee (scroll is default (sliding infinitely, when it gets to the defined width then it resets back to the other side after the last text scrolls through), slide makes it move to the end of the defined width and then stop, and alternate makes it move back and forth within the defined width -->
+        <marquee direction="left" scrollamount="11" width="98%" height="90%" behavior="scroll">
+            <h1><em>Welcome!</em></h1>
+        </marquee>
+    </div>
+<button class="musicbtngreen" onClick="play()"><img id="speaker" alt="" src="_images/speakericon.png" width="17"></button>
+<a class="titlebtn" href="#openModal2"><strong>Webpage Selection</strong></a>
+	<div id="openModal2" class="modalDialog2">
+    	<div class="panel">
+            <a href="#close" title="Close" class="close2">X</a>
+            <strong>
+             <a class="btn" href="http://cs.bcp.org/cozort/ecs/cozspring17/woo_michael/history">History</a>
+             <a class="btn" href="http://cs.bcp.org/cozort/ecs/cozspring17/woo_michael/hardware">Hardware</a>
+             <a class="btn" href="http://cs.bcp.org/cozort/ecs/cozspring17/woo_michael/dragontreasure">Dragon Treasure</a>
+             <a class="btn" href="http://cs.bcp.org/cozort/ecs/cozspring17/woo_michael/roguelike">Roguelike</a>
+             <a class="btn" href="#pin">Pinpad</a>
+            </strong>
+    	</div>
+	</div>
+    <!-- The "#" makes a link to the openModal. When activating the link, it opens the modal -->
+    <a class="mbtn" href="#openModal" title="Open"><strong>Portfolio</strong></a>
+    <div id="openModal" class="modalDialog modaldialogspinin">
+        <div>
+        <!-- Same thing as said above, however when activating the link, it closes the modal -->
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Michael Woo's ECS Portfolio</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+<div id="pin" class="modalDialog2">
+    	<div id="formArea" class="panel2">
+            <a href="#close" title="Close" class="close3">X</a>
+                    <!-- The different 0-9 Buttons. onclick="addNumber(this.value) adds the number into javascript to compute -->
+                    <input type="button" value="1" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="2" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="3" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="4" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="5" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="6" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="7" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="8" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="9" onclick="addNumber(this.value)" class="fakebtn" />
+                    <input type="button" value="0" onclick="addNumber(this.value)" class="fakebtn" />
+                    <br>
+                    <input type="text" name="pinNumber" id="pinNumber" class="pinform">
+                    <input type="submit" name="pinButton" id="pinButton" class="fakebtn3" value="Enter" onclick="checkPinNumber(); move();" />
+                    <input type="submit" name="pinButton" id="pinClear" class="fakebtn3" value="Clear" onclick="clearPad()" />
+                    <br>
+                    <a class="btn" href="#openModal2">Back</a>
+    	</div>
+	</div>
+  </body>
+</html>
